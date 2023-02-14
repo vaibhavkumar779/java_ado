@@ -9,10 +9,18 @@ trigger:
 pool: local
 
 steps:
-- script: |
-    echo Starting the build
-    mvn package /mig  
-  displayName: 'Build with Maven'
+- task: CmdLine@2
+  inputs:
+    script: mvn compile /home/knoldus/ado_duckcreek/mig
+# - task: PowerShell@2
+#   displayName: "Store multiple json data in keyvault"
+#   inputs:
+#     filePath: './multiple_data_json.ps1'
+# - script: |
+#    displayName: 'Build with Maven'
+#    inputs:
+#     filePath: './multiple_data_json.ps1' 
+  
 
 
 # - script: |
