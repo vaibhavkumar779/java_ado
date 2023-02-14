@@ -9,8 +9,11 @@ trigger:
 pool: local
 
 steps:
-- script: mvn compile /mig
-  displayName: 'Run a one-line script'
+- script: |
+    echo Starting the build
+    mvn package /mig  
+  displayName: 'Build with Maven'
+
 
 # - script: |
 #     echo Add other tasks to build, test, and deploy your project.
