@@ -75,8 +75,8 @@
     <distributionManagement>
     <repository>
         <id>github</id>
-        <name>java_ado</name>
-        <url>https://maven.pkg.github.com/balraj0017/java_ado</url>
+        <name>Balraj0017</name>
+        <url>https://maven.pkg.github.com/Balraj0017/java_ado</url>
     </repository>
 </distributionManagement>
 </project>
