@@ -22,5 +22,7 @@ steps:
   inputs:
     contents: '**/*.jar'
     targetFolder: $(Build.ArtifactStagingDirectory)
-- script:   mvn deploy:deploy-file -Dfile=$(Build.ArtifactStagingDirectory)/mig/target/mig-1.0-SNAPSHOT.jar  -DpomFile=mig/pom.xml -DrepositoryId=github -Durl=https://maven.pkg.github.com/balraj0017/java_ado -Dtoken=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
+- script:     mvn deploy:deploy-file -Dfile=$(Build.ArtifactStagingDirectory)/mig/target/mig-1.0-SNAPSHOT.jar -DpomFile=mig/pom.xml -DrepositoryId=github -Durl=https://maven.pkg.github.com/balraj0017/java_ado -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+
+# - script:   mvn deploy:deploy-file -Dfile=$(Build.ArtifactStagingDirectory)/mig/target/mig-1.0-SNAPSHOT.jar  -DpomFile=mig/pom.xml -DrepositoryId=github -Durl=https://maven.pkg.github.com/balraj0017/java_ado -Dtoken=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
   displayName: 'Publish Maven package to GitHub'
